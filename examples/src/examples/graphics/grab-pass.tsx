@@ -68,11 +68,7 @@ class GrabPassExample {
     example(canvas: HTMLCanvasElement, files: { 'shader.vert': string, 'shader.frag': string }): void {
 
         // Create the app and start the update loop
-        const app = new pc.Application(canvas, {
-            graphicsDeviceOptions: {
-                alpha: true
-            }
-        });
+        const app = new pc.Application(canvas);
 
         const assets = {
             'normal': new pc.Asset('normal', 'texture', { url: '/static/assets/textures/normal-map.png' }),

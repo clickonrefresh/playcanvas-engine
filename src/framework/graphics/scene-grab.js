@@ -158,7 +158,7 @@ class SceneGrab {
                     // allocate / resize existing RT as needed
                     if (self.resizeCondition(this.colorRenderTarget, camera.renderTarget?.colorBuffer, device)) {
                         self.releaseRenderTarget(this.colorRenderTarget);
-                        this.colorRenderTarget = self.allocateRenderTarget(this.colorRenderTarget, camera.renderTarget, device, this.colorFormat, false, true, false);
+                        this.colorRenderTarget = self.allocateRenderTarget(this.colorRenderTarget, camera.renderTarget, device, self.colorFormat, false, true, false);
                     }
 
                     // copy color from the current render target
@@ -306,7 +306,7 @@ class SceneGrab {
                     // reallocate RT if needed
                     if (self.resizeCondition(this.colorRenderTarget, camera.renderTarget?.colorBuffer, device)) {
                         self.releaseRenderTarget(this.colorRenderTarget);
-                        this.colorRenderTarget = self.allocateRenderTarget(this.colorRenderTarget, camera.renderTarget, device, this.colorFormat, false, false, false);
+                        this.colorRenderTarget = self.allocateRenderTarget(this.colorRenderTarget, camera.renderTarget, device, self.colorFormat, false, false, false);
                     }
 
                     // copy out the color buffer
